@@ -1,20 +1,24 @@
 #include <stdio.h>
 #include <stdlib.h>
 #define N_STUDENT 5
-int main(void) {
-    int i, average;
-    int sum;
-    int grade [N_STUDENT];
-    printf("input 5 scores: ");
-    
-    sum=0;
-    for(i=0;i<N_STUDENT;i++){
-    	scanf("%d", &grade[i]);
-    	sum+=grade[i];
-	}
-	average=sum/N_STUDENT;
-	printf("score average : %i\n", average);
+int main(int argc, char *argv[]) {
+    int i;
+	int a[N_STUDENT]={1, 2, 3, 4, 5};
+	int b[N_STUDENT]={1, 2, 3, 4, 5};
+	int flag=0;
 	
-    return 0;
+	for(i=0;i<N_STUDENT;i++)
+	{
+		if (a[i]  !=b[i])
+		{
+			printf("array a and b are not the same\n");
+			flag=1;
+		}
+	}
+	
+	if (flag==0)
+	printf("array a and b are the same\n");
+	
+	return 0;
 }
 
